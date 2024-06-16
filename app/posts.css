@@ -1,0 +1,61 @@
+/* app/posts.css */
+.posts-container {
+    @apply max-w-4xl mx-auto p-4;
+}
+
+.header {
+    @apply flex justify-between items-center mb-8 bg-blue-600 text-white p-4 rounded-lg shadow;
+}
+
+.header-title {
+    @apply text-3xl font-bold;
+}
+
+.profile-container {
+    @apply relative;
+}
+
+.profile-button {
+    @apply w-10 h-10 rounded-full cursor-pointer;
+}
+
+.profile-menu {
+    @apply absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg;
+    display: none;
+}
+
+.profile-container:hover .profile-menu {
+    display: block;
+}
+
+.profile-menu-item {
+    @apply px-4 py-2 text-gray-800 hover:bg-gray-100 cursor-pointer;
+}
+
+.profile-name {
+    @apply text-lg font-semibold;
+}
+
+.logout-button {
+    @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full;
+}
+
+.welcome-message {
+    @apply mb-4 text-lg text-gray-700;
+}
+
+.post-list {
+    @apply space-y-4;
+}
+
+.post-item {
+    @apply bg-white p-6 rounded-lg shadow hover:bg-gray-100 transition duration-300;
+}
+
+.post-title {
+    @apply text-2xl font-semibold text-blue-600 hover:underline;
+}
+
+.post-body {
+    @apply mt-2 text-gray-700;
+}
