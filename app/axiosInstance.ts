@@ -25,7 +25,9 @@ export const fetchPostById = async (id: string) => {
 
 export const loginUser = async (username: string, password: string) => {
   const response = await axiosInstance.post('auth/login', { username, password });
-  return response.data.token;
+  const { token, ...user } = response.data;
+  const userData = { id: user.id, firstName: user.firstName, lastName: user.lastName, username: user.username, email: user.email };
+  return { token, user: userData };
 };
 
 export default axiosInstance;
